@@ -1,0 +1,47 @@
+---
+title: "sesion1"
+author: "Amylkar y Johan"
+date: "9/8/2019"
+output: pdf_document
+bibliography: bibliografia.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com> [@woo2007markdown].
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk Tyasy [-@woo2007markdown] dijo like this:
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+```{r cars}
+head(cars)
+```
+```{r}
+library(knitr)
+kable( x=iris[1:10,] , caption = "Datos"
+, align = c('l', 'c')
+, digits = 1
+, format.args = list( decimal.mark = ",")
+)
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Bibliografía
